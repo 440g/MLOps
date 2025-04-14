@@ -3,4 +3,4 @@ def funcA():
 
 if __name__ == '__main__':
     funcA()
-    print('conflict')
+    print('conflict_conflict')
