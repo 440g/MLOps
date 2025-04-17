@@ -1,0 +1,14 @@
+if (id <= 491.5) and (ca <= 0.5) and (thal <= 1.5) then class: 0 (proba: 96.72%) | based on 183 samples
+
+if (id > 491.5) and (id > 600.0) and (oldpeak <= 1.9) then class: 1 (proba: 39.87%) | based on 153 samples
+
+if (id > 491.5) and (id <= 600.0) then class: 1 (proba: 100.0%) | based on 65 samples
+
+if (id > 491.5) and (id > 600.0) and (oldpeak > 1.9) then class: 2 (proba: 32.65%) | based on 49 samples
+
+if (id <= 491.5) and (ca > 0.5) and (slope <= 1.5) then class: 3 (proba: 29.55%) | based on 44 samples
+
+if (id <= 491.5) and (ca <= 0.5) and (thal > 1.5) then class: 0 (proba: 46.67%) | based on 30 samples
+
+if (id <= 491.5) and (ca > 0.5) and (slope > 1.5) then class: 0 (proba: 60.71%) | based on 28 samples
+

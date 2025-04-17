@@ -1,0 +1,261 @@
+{
+    "uid": "1b587917-1132-4095-8071-c3702b175aad",
+    "name": "2_DecisionTree",
+    "preprocessing": [
+        {
+            "missing_values": [
+                {
+                    "fill_method": "na_fill_median",
+                    "fill_params": {
+                        "trestbps": 130.0,
+                        "chol": 220.0,
+                        "fbs": false,
+                        "restecg": "normal",
+                        "thalch": 140.0,
+                        "exang": false,
+                        "oldpeak": 0.5,
+                        "slope": "flat",
+                        "ca": 0.0,
+                        "thal": "normal"
+                    },
+                    "datetime_columns": []
+                }
+            ],
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "sex": {
+                            "Female": 0,
+                            "Male": 1
+                        },
+                        "dataset": {
+                            "Cleveland": 0,
+                            "Hungary": 1,
+                            "Switzerland": 2,
+                            "VA Long Beach": 3
+                        },
+                        "cp": {
+                            "asymptomatic": 0,
+                            "atypical angina": 1,
+                            "non-anginal": 2,
+                            "typical angina": 3
+                        },
+                        "fbs": {
+                            "False": 0,
+                            "True": 1
+                        },
+                        "restecg": {
+                            "lv hypertrophy": 0,
+                            "normal": 1,
+                            "st-t abnormality": 2
+                        },
+                        "exang": {
+                            "False": 0,
+                            "True": 1
+                        },
+                        "slope": {
+                            "downsloping": 0,
+                            "flat": 1,
+                            "upsloping": 2
+                        },
+                        "thal": {
+                            "fixed defect": 0,
+                            "normal": 1,
+                            "reversable defect": 2
+                        }
+                    },
+                    "columns": [
+                        "sex",
+                        "dataset",
+                        "cp",
+                        "fbs",
+                        "restecg",
+                        "exang",
+                        "slope",
+                        "thal"
+                    ]
+                }
+            ],
+            "categorical_y": {
+                "0": 0,
+                "1": 1,
+                "2": 2,
+                "3": 3,
+                "4": 4
+            },
+            "ml_task": "multiclass_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "sex": [
+                        "categorical_to_int"
+                    ],
+                    "dataset": [
+                        "categorical_to_int"
+                    ],
+                    "cp": [
+                        "categorical_to_int"
+                    ],
+                    "trestbps": [
+                        "na_fill_median"
+                    ],
+                    "chol": [
+                        "na_fill_median"
+                    ],
+                    "fbs": [
+                        "na_fill_median",
+                        "categorical_to_int"
+                    ],
+                    "restecg": [
+                        "na_fill_median",
+                        "categorical_to_int"
+                    ],
+                    "thalch": [
+                        "na_fill_median"
+                    ],
+                    "exang": [
+                        "na_fill_median",
+                        "categorical_to_int"
+                    ],
+                    "oldpeak": [
+                        "na_fill_median"
+                    ],
+                    "slope": [
+                        "na_fill_median",
+                        "categorical_to_int"
+                    ],
+                    "ca": [
+                        "na_fill_median"
+                    ],
+                    "thal": [
+                        "na_fill_median",
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "categorical_to_int"
+                ],
+                "ml_task": "multiclass_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.6.1",
+            "algorithm_name": "Decision Tree",
+            "algorithm_short_name": "Decision Tree",
+            "uid": "a11e6c2d-69c6-4350-83a2-5f2c1d06c514",
+            "params": {
+                "model_type": "Decision Tree",
+                "ml_task": "multiclass_classification",
+                "n_jobs": -1,
+                "seed": 1235,
+                "criterion": "gini",
+                "max_depth": 3,
+                "num_class": 5,
+                "explain_level": 1
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "trees_in_step": 1,
+            "train_cant_improve_limit": 0,
+            "max_steps": 1,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "sex": [
+                    "categorical_to_int"
+                ],
+                "dataset": [
+                    "categorical_to_int"
+                ],
+                "cp": [
+                    "categorical_to_int"
+                ],
+                "trestbps": [
+                    "na_fill_median"
+                ],
+                "chol": [
+                    "na_fill_median"
+                ],
+                "fbs": [
+                    "na_fill_median",
+                    "categorical_to_int"
+                ],
+                "restecg": [
+                    "na_fill_median",
+                    "categorical_to_int"
+                ],
+                "thalch": [
+                    "na_fill_median"
+                ],
+                "exang": [
+                    "na_fill_median",
+                    "categorical_to_int"
+                ],
+                "oldpeak": [
+                    "na_fill_median"
+                ],
+                "slope": [
+                    "na_fill_median",
+                    "categorical_to_int"
+                ],
+                "ca": [
+                    "na_fill_median"
+                ],
+                "thal": [
+                    "na_fill_median",
+                    "categorical_to_int"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "categorical_to_int"
+            ],
+            "ml_task": "multiclass_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "AutoML_1/X.data",
+            "y_path": "AutoML_1/y.data",
+            "results_path": "AutoML_1"
+        },
+        "learner": {
+            "model_type": "Decision Tree",
+            "ml_task": "multiclass_classification",
+            "n_jobs": -1,
+            "seed": 1235,
+            "criterion": "gini",
+            "max_depth": 3,
+            "num_class": 5,
+            "explain_level": 1
+        },
+        "automl_random_state": 1234,
+        "ml_task": "multiclass_classification",
+        "explain_level": 1,
+        "name": "2_DecisionTree",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 60
+    },
+    "saved": [
+        "2_DecisionTree/learner_fold_0.decision_tree"
+    ],
+    "predictions_fname": "2_DecisionTree/predictions_validation.csv",
+    "metric_name": "logloss",
+    "final_loss": "0.8998347995540072",
+    "train_time": 2.747462034225464,
+    "is_stacked": false,
+    "joblib_version": "1.4.2"
+}

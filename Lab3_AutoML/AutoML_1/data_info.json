@@ -1,0 +1,93 @@
+{
+    "columns": [
+        "id",
+        "age",
+        "sex",
+        "dataset",
+        "cp",
+        "trestbps",
+        "chol",
+        "fbs",
+        "restecg",
+        "thalch",
+        "exang",
+        "oldpeak",
+        "slope",
+        "ca",
+        "thal"
+    ],
+    "rows": 736,
+    "cols": 15,
+    "target_is_numeric": true,
+    "columns_info": {
+        "id": [
+            "scale"
+        ],
+        "age": [
+            "scale"
+        ],
+        "sex": [
+            "categorical",
+            "few_categories"
+        ],
+        "dataset": [
+            "categorical",
+            "few_categories"
+        ],
+        "cp": [
+            "categorical",
+            "few_categories"
+        ],
+        "trestbps": [
+            "missing_values",
+            "scale"
+        ],
+        "chol": [
+            "missing_values",
+            "scale"
+        ],
+        "fbs": [
+            "missing_values",
+            "categorical",
+            "few_categories"
+        ],
+        "restecg": [
+            "missing_values",
+            "categorical",
+            "few_categories"
+        ],
+        "thalch": [
+            "missing_values",
+            "scale"
+        ],
+        "exang": [
+            "missing_values",
+            "categorical",
+            "few_categories"
+        ],
+        "oldpeak": [
+            "missing_values",
+            "scale"
+        ],
+        "slope": [
+            "missing_values",
+            "categorical",
+            "few_categories"
+        ],
+        "ca": [
+            "missing_values",
+            "scale"
+        ],
+        "thal": [
+            "missing_values",
+            "categorical",
+            "few_categories"
+        ]
+    },
+    "target_info": [],
+    "n_features": 15,
+    "is_sample_weighted": false,
+    "is_fairness_applied": false,
+    "n_classes": 5,
+    "num_class": 5
+}

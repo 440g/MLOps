@@ -1,0 +1,373 @@
+{
+    "uid": "3572a4c3-66d7-4109-bd51-be62c768b641",
+    "name": "5_Default_NeuralNetwork",
+    "preprocessing": [
+        {
+            "missing_values": [
+                {
+                    "fill_method": "na_fill_median",
+                    "fill_params": {
+                        "trestbps": 130.0,
+                        "chol": 220.0,
+                        "fbs": false,
+                        "restecg": "normal",
+                        "thalch": 140.0,
+                        "exang": false,
+                        "oldpeak": 0.5,
+                        "slope": "flat",
+                        "ca": 0.0,
+                        "thal": "normal"
+                    },
+                    "datetime_columns": []
+                }
+            ],
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "sex": {
+                            "Female": 0,
+                            "Male": 1
+                        },
+                        "dataset": {
+                            "Cleveland": 0,
+                            "Hungary": 1,
+                            "Switzerland": 2,
+                            "VA Long Beach": 3
+                        },
+                        "cp": {
+                            "asymptomatic": 0,
+                            "atypical angina": 1,
+                            "non-anginal": 2,
+                            "typical angina": 3
+                        },
+                        "fbs": {
+                            "False": 0,
+                            "True": 1
+                        },
+                        "restecg": {
+                            "lv hypertrophy": 0,
+                            "normal": 1,
+                            "st-t abnormality": 2
+                        },
+                        "exang": {
+                            "False": 0,
+                            "True": 1
+                        },
+                        "slope": {
+                            "downsloping": 0,
+                            "flat": 1,
+                            "upsloping": 2
+                        },
+                        "thal": {
+                            "fixed defect": 0,
+                            "normal": 1,
+                            "reversable defect": 2
+                        }
+                    },
+                    "columns": [
+                        "sex",
+                        "dataset",
+                        "cp",
+                        "fbs",
+                        "restecg",
+                        "exang",
+                        "slope",
+                        "thal"
+                    ]
+                }
+            ],
+            "scale": [
+                {
+                    "scale": [
+                        268.1070360839707,
+                        9.191234013311847,
+                        0.40480922716382767,
+                        1.1439181020678908,
+                        0.9619343456599407,
+                        19.083793879254642,
+                        108.59101025833905,
+                        0.35202776236206146,
+                        0.6409639438827257,
+                        25.717840944836215,
+                        0.4854937268288542,
+                        1.0588107150122454,
+                        0.5348561229468428,
+                        0.6343788008185302,
+                        0.46081487233578683
+                    ],
+                    "mean": [
+                        467.32608695652175,
+                        53.90760869565217,
+                        0.7934782608695652,
+                        1.2681159420289856,
+                        0.7862318840579711,
+                        132.02898550724638,
+                        195.2753623188406,
+                        0.14492753623188406,
+                        0.980072463768116,
+                        137.0163043478261,
+                        0.3804347826086957,
+                        0.8376811594202899,
+                        1.1539855072463767,
+                        0.2246376811594203,
+                        1.1521739130434783
+                    ],
+                    "var": [
+                        71881.38279773157,
+                        84.47878268746061,
+                        0.16387051039697542,
+                        1.3085486242386055,
+                        0.9253176853602183,
+                        364.1911888258769,
+                        11792.007508926697,
+                        0.12392354547364,
+                        0.41083477735769797,
+                        661.4073428638941,
+                        0.23570415879017012,
+                        1.1210801302247426,
+                        0.2860710722537282,
+                        0.4024364629279563,
+                        0.21235034656584753
+                    ],
+                    "n_samples_seen": 552,
+                    "n_features_in": 15,
+                    "columns": [
+                        "id",
+                        "age",
+                        "sex",
+                        "dataset",
+                        "cp",
+                        "trestbps",
+                        "chol",
+                        "fbs",
+                        "restecg",
+                        "thalch",
+                        "exang",
+                        "oldpeak",
+                        "slope",
+                        "ca",
+                        "thal"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "categorical_y": {
+                "0": 0,
+                "1": 1,
+                "2": 2,
+                "3": 3,
+                "4": 4
+            },
+            "ml_task": "multiclass_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "id": [
+                        "scale_normal"
+                    ],
+                    "age": [
+                        "scale_normal"
+                    ],
+                    "sex": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "dataset": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "cp": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "trestbps": [
+                        "na_fill_median",
+                        "scale_normal"
+                    ],
+                    "chol": [
+                        "na_fill_median",
+                        "scale_normal"
+                    ],
+                    "fbs": [
+                        "na_fill_median",
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "restecg": [
+                        "na_fill_median",
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "thalch": [
+                        "na_fill_median",
+                        "scale_normal"
+                    ],
+                    "exang": [
+                        "na_fill_median",
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "oldpeak": [
+                        "na_fill_median",
+                        "scale_normal"
+                    ],
+                    "slope": [
+                        "na_fill_median",
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "ca": [
+                        "na_fill_median",
+                        "scale_normal"
+                    ],
+                    "thal": [
+                        "na_fill_median",
+                        "categorical_to_int",
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "categorical_to_int"
+                ],
+                "ml_task": "multiclass_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.6.1",
+            "algorithm_name": "Neural Network",
+            "algorithm_short_name": "Neural Network",
+            "uid": "d47895f4-01fb-40fc-a58f-bc1542dc831a",
+            "params": {
+                "model_type": "Neural Network",
+                "ml_task": "multiclass_classification",
+                "n_jobs": -1,
+                "dense_1_size": 32,
+                "dense_2_size": 16,
+                "learning_rate": 0.05,
+                "seed": 5,
+                "num_class": 5,
+                "explain_level": 1
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "id": [
+                    "scale_normal"
+                ],
+                "age": [
+                    "scale_normal"
+                ],
+                "sex": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "dataset": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "cp": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "trestbps": [
+                    "na_fill_median",
+                    "scale_normal"
+                ],
+                "chol": [
+                    "na_fill_median",
+                    "scale_normal"
+                ],
+                "fbs": [
+                    "na_fill_median",
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "restecg": [
+                    "na_fill_median",
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "thalch": [
+                    "na_fill_median",
+                    "scale_normal"
+                ],
+                "exang": [
+                    "na_fill_median",
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "oldpeak": [
+                    "na_fill_median",
+                    "scale_normal"
+                ],
+                "slope": [
+                    "na_fill_median",
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "ca": [
+                    "na_fill_median",
+                    "scale_normal"
+                ],
+                "thal": [
+                    "na_fill_median",
+                    "categorical_to_int",
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "categorical_to_int"
+            ],
+            "ml_task": "multiclass_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "AutoML_1/X.data",
+            "y_path": "AutoML_1/y.data",
+            "results_path": "AutoML_1"
+        },
+        "learner": {
+            "model_type": "Neural Network",
+            "ml_task": "multiclass_classification",
+            "n_jobs": -1,
+            "dense_1_size": 32,
+            "dense_2_size": 16,
+            "learning_rate": 0.05,
+            "seed": 5,
+            "num_class": 5,
+            "explain_level": 1
+        },
+        "automl_random_state": 1234,
+        "ml_task": "multiclass_classification",
+        "explain_level": 1,
+        "name": "5_Default_NeuralNetwork",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 60
+    },
+    "saved": [
+        "5_Default_NeuralNetwork/learner_fold_0.neural_network"
+    ],
+    "predictions_fname": "5_Default_NeuralNetwork/predictions_validation.csv",
+    "metric_name": "logloss",
+    "final_loss": "1.9444811984117785",
+    "train_time": 0.2962760925292969,
+    "is_stacked": false,
+    "joblib_version": "1.4.2"
+}
